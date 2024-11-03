@@ -67,7 +67,7 @@ export default function Navbar() {
            Home
           </a>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="about-us" className="text-sm font-semibold leading-6 text-gray-900">
             About Us
           </a>
           <a href="contact" className="text-sm font-semibold leading-6 text-gray-900">
@@ -108,20 +108,20 @@ export default function Navbar() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
               <a
-                  href="#"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Home
                 </a>
              
                 <a
-                  href="#"
+                  href="about-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                About Us
                 </a>
                 <a
-                  href="#"
+                  href="contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact Us
@@ -137,12 +137,12 @@ export default function Navbar() {
                 <a>
                   My Account
                 </a>
-                <a>
+                {/* <a>
                   My Account
                 </a>
                 <a>
                   My Account
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
