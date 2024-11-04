@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import dress from '@/assets/dress-ezgif.com-webp-to-png-converter.png'
+import dress from '@/app/assets/dress.jpg'
 // Sample data (replace this with your dynamic data source)
+import heels from '@/app/assets/heels-ezgif.com-webp-to-png-converter.png'
+import purse from '@/app/assets/purse.jpg'
 const products = [
   {
     id: 1,
@@ -16,41 +18,41 @@ const products = [
   },
   {
     id: 2,
-    name: 'MESH BROWN SANDAL',
+    name: 'YSL Heels',
     price: 190.00,
     rating: 3,
     reviews: 3,
     description: 'Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.',
-    imageUrl: 'path-to-your-image-2.jpg',
+    imageUrl: heels,
     isOnSale: false,
   },
   {id: 3,
-    name: 'MESH BROWN BAG',
+    name: 'MESH GREEN PURSE',
     price: 190.00,
     rating: 4,
     reviews: 3,
     description: 'Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.',
-    imageUrl: 'path-to-your-image-2.jpg',
+    imageUrl: purse,
     isOnSale: false},
   // Add more products as needed
 ];
 
 const ProductList = () => {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 grid grid-cols-3">
       {products.map((product) => (
         <div key={product.id} className="flex flex-col md:flex-row mb-8 border-b pb-4">
         
           <div className="md:w-3/4 md:pl-4">
-          {/* <Image 
-              src={product.imageUrl}
-              alt={product.name} 
-              width={300} // Replace with desired width
-              height={400} // Replace with desired height
-              className="w-full h-auto" 
-            /> */}
             <h2 className="text-xl font-bold">{product.name} </h2>
            
+          <Image 
+              src={product.imageUrl}
+              alt={product.name} 
+              width={100} // Replace with desired width
+              height={100} // Replace with desired height
+               
+            />
             {product.oldPrice && (
               <p className="text-gray-500 line-through">NPR.{product.oldPrice.toFixed(2)}</p>
             )}
