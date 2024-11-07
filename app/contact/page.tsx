@@ -1,7 +1,14 @@
 import React from "react";
+import background from '@/app/assets/background.png'
 
 const ContactUs = () => {
   return (
+    <>
+    <div className='h-64 w-full bg-fixed' style={{backgroundImage:`url(${background.src})`}}>
+   <div className='flex justify-center items-center h-64'>
+    <h1 className='font-bold mb-4 lg:text-3xl text-2xl '>CONTACT US</h1></div>
+   </div>
+    
     <div className="bg-gray-100 py-10">
       <div className="container mx-auto p-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -97,6 +104,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
