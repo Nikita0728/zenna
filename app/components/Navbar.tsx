@@ -137,13 +137,14 @@ export default function Navbar() {
                 <a>
                   My Account
                 </a>
-                {/* <a>
-                  My Account
-                </a>
+             
+              </div>
+              {/* <div className="py-6">
                 <a>
                   My Account
-                </a> */}
-              </div>
+                </a>
+             
+              </div> */}
             </div>
           </div>
         </DialogPanel>
