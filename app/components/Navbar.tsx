@@ -1,6 +1,8 @@
 'use client'
+import { useState } from 'react';
+import { FaSearch } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 
-import { useState } from 'react'
 import {
   Dialog,
   DialogPanel,
@@ -78,10 +80,20 @@ export default function Navbar() {
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="shop" className="text-sm font-semibold leading-6 text-gray-900">
+        <a href="shop" className="text-sm font-semibold leading-6 text-gray-900 mr-5">
          My Account
           </a>   
           </div>
+          <div className='hidden lg:flex lg:mr-5 '>
+            <a href="shop" className="text-sm font-semibold leading-6 text-gray-900 ">
+              <button>
+          <FaSearch /> </button></a>
+          </div>
+          <div className='hidden lg:flex '>
+            <a href="shop" className="text-sm font-semibold leading-6 text-gray-900 ">
+          <FaShoppingCart /></a>
+          </div>
+          
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
@@ -139,12 +151,18 @@ export default function Navbar() {
                 </a>
              
               </div>
-              {/* <div className="py-6">
+              <div className="py-6">
                 <a>
-                  My Account
+                  <FaSearch/>
                 </a>
              
-              </div> */}
+              </div>
+              <div className="py-6">
+                <a>
+                  <FaShoppingCart/>
+                </a>
+             
+              </div>
             </div>
           </div>
         </DialogPanel>
