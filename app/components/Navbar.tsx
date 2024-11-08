@@ -38,7 +38,11 @@ const callsToAction = [
 ]
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showSearchBar, setShowSearchBar]= useState(false);
+  const toggleSearchBar =()=>{
+    setShowSearchBar(!showSearchBar);
+  }
 
   return (
     <header className="bg-white">
@@ -84,10 +88,20 @@ export default function Navbar() {
          My Account
           </a>   
           </div>
-          <div className='hidden lg:flex lg:mr-5 '>
-            <a href="shop" className="text-sm font-semibold leading-6 text-gray-900 ">
-              <button>
-          <FaSearch /> </button></a>
+          <div className='hidden lg:flex items-center  '>
+          <div className="py-6 flex items-center cursor-pointer mr-3">
+                <a onClick={toggleSearchBar}>
+                  <FaSearch/>
+                </a>
+                {showSearchBar && (
+        <input
+          type="text"
+          placeholder="Search..."
+          className="mt-2 p-2 border rounded"
+          autoFocus
+        />
+      )}
+      </div>
           </div>
           <div className='hidden lg:flex '>
             <a href="shop" className="text-sm font-semibold leading-6 text-gray-900 ">
@@ -152,9 +166,17 @@ export default function Navbar() {
              
               </div>
               <div className="py-6">
-                <a>
+                <a onClick={toggleSearchBar}>
                   <FaSearch/>
                 </a>
+                {showSearchBar && (
+        <input
+          type="text"
+          placeholder="Search..."
+          className="mt-2 p-2 border rounded"
+          autoFocus
+        />
+      )}
              
               </div>
               <div className="py-6">
