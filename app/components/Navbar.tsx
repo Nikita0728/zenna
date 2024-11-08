@@ -90,9 +90,9 @@ export default function Navbar() {
           </div>
           <div className='hidden lg:flex items-center  '>
           <div className="py-6 flex items-center cursor-pointer mr-3">
-                <a onClick={toggleSearchBar}>
+              <div className='mr-4'> <a onClick={toggleSearchBar}>
                   <FaSearch/>
-                </a>
+                </a></div>  
                 {showSearchBar && (
         <input
           type="text"
@@ -104,7 +104,7 @@ export default function Navbar() {
       </div>
           </div>
           <div className='hidden lg:flex '>
-            <a href="shop" className="text-sm font-semibold leading-6 text-gray-900 ">
+            <a href="cart" className="text-sm font-semibold leading-6 text-gray-900 ">
           <FaShoppingCart /></a>
           </div>
           
