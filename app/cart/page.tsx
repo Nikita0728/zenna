@@ -1,4 +1,6 @@
 import React from "react";
+import tee from "@/app/assets/TEE.jpg"
+import Image from "next/image";
 
 const ShoppingCart = () => {
   const items = [
@@ -8,16 +10,37 @@ const ShoppingCart = () => {
       color: "Sienna",
       size: "Large",
       price: 32.0,
-      image: "path_to_image_1.jpg",
+      image: tee,
       status: "In stock",
     },
+
+    {
+        id: 1,
+        name: "Basic Tee",
+        color: "Sienna",
+        size: "Large",
+        price: 32.0,
+        image: tee,
+        status: "In stock",
+      },
+      
+      {
+        id: 1,
+        name: "Basic Tee",
+        color: "Sienna",
+        size: "Large",
+        price: 32.0,
+        image: tee,
+        status: "In stock",
+      },
+
     {
       id: 2,
-      name: "Basic Tee",
+      name: "Basic White Tee",
       color: "Black",
       size: "Large",
       price: 32.0,
-      image: "path_to_image_2.jpg",
+      image: tee,
       status: "Ships in 3-4 weeks",
     },
     {
@@ -26,7 +49,7 @@ const ShoppingCart = () => {
       color: "White",
       size: "",
       price: 35.0,
-      image: "path_to_image_3.jpg",
+      image: tee,
       status: "In stock",
     },
   ];
@@ -43,7 +66,7 @@ const ShoppingCart = () => {
         <h1 className="text-2xl font-bold">Shopping Cart</h1>
         {items.map((item) => (
           <div key={item.id} className="flex items-center space-x-4 border-b pb-4">
-            <img src={item.image} alt={item.name} className="w-24 h-24 object-cover" />
+            <Image src={item.image} alt={item.name} className="w-24 h-24 object-cover" />
             <div className="flex-1">
               <h2 className="text-lg font-semibold">{item.name}</h2>
               <p className="text-sm text-gray-500">{item.color} {item.size && ` - ${item.size}`}</p>
