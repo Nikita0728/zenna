@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import background from '@/app/assets/background.png'
+ import background from '@/app/assets/background.png'
 
 const page = () => {
   return (

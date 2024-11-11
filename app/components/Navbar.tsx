@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
+import zenna from '@/app/assets/zenna.png'
+
 
 import {
   Dialog,
@@ -24,6 +26,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image';
 
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -43,6 +46,16 @@ export default function Navbar() {
   const toggleSearchBar =()=>{
     setShowSearchBar(!showSearchBar);
   }
+ 
+    const [isClicked, setIsClicked]= useState(false);
+    const handleClick =()=>{
+      setIsClicked(true);
+    }
+    
+
+  
+
+  
 
   return (
     <header className="bg-white">
@@ -50,9 +63,9 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
+            <Image
               alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+              src={zenna}
               className="h-8 w-auto"
             />
           </a>
@@ -69,17 +82,17 @@ export default function Navbar() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
        
-          <a href="/" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/" className={`text-sm font-semibold leading-6 ${isClicked? 'text-[#cc812d]':'hover:text-[#cc812d]'}`} onClick={handleClick}>
            Home
           </a>
 
-          <a href="about-us" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="about-us" className="text-sm font-semibold leading-6 text-gray-900 hover:text-[#cc812d] focus:text-[#cc812d]">
             About Us
           </a>
-          <a href="contact" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="contact" className="text-sm font-semibold leading-6 text-gray-900 hover:text-[#cc812d]">
            Contact Us
           </a>
-          <a href="shop" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="shop" className="text-sm font-semibold leading-6 text-gray-900 hover:text-[#cc812d]">
            Shop
           </a>
         </PopoverGroup>
@@ -115,10 +128,9 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
+              <Image
                 alt=""
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
+                src={zenna}
               />
             </a>
             <button
