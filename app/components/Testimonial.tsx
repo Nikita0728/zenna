@@ -44,7 +44,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto mt-10">
+    <div className="w-full max-w-2xl mx-auto my-10">
       <h2 className="text-3xl font-bold text-center mb-3">Happy clients</h2>
       <div className="relative flex items-center justify-center">
         <button

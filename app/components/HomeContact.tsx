@@ -1,15 +1,12 @@
 import React from "react";
-import background from '@/app/assets/background.png'
 
-const ContactUs = () => {
+const HomeContact = () => {
   return (
     <>
-    <div className='h-64 w-full bg-fixed' style={{backgroundImage:`url(${background.src})`}}>
-   <div className='flex justify-center items-center h-64'>
-    <h1 className='font-bold mb-4 lg:text-3xl text-2xl '>CONTACT US</h1></div>
-   </div>
+ 
     
     <div className="bg-gray-100 py-10">
+ <h2 className="font-bold text-2xl flex justify-center"> Reach Out to Us</h2>
       <div className="container mx-auto p-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Form */}
@@ -108,4 +105,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default HomeContact;
